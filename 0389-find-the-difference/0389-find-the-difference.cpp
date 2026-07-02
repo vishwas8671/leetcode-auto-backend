@@ -17,18 +17,33 @@
 // };
 
 
+// class Solution {
+// public:
+//     char findTheDifference(string s, string t) {
+//         int sum_s=0;
+//         int sum_t=0;
+//         for(char &ch : s) {
+//             sum_s += ch;
+//         }
+//         for(char &ch : t) {
+//             sum_t += ch;
+//         }
+//         return (char) (sum_t - sum_s);
+//     }
+// }
+;
+
 class Solution {
 public:
     char findTheDifference(string s, string t) {
-        int sum_s=0;
-        int sum_t=0;
+        int XOR =0;
         for(char &ch : s) {
-            sum_s += ch;
+            XOR ^= ch;
         }
         for(char &ch : t) {
-            sum_t += ch;
+            XOR ^= ch;
         }
-        return (char) (sum_t - sum_s);
+        return (char)XOR;
     }
 };
 

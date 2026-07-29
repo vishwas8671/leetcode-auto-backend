@@ -7,6 +7,9 @@ public:
         for (int i = 0; i < mat.size(); i++) {
             int count = 0;
 
+            // for (int i = 0; i < mat.size(); i++) {
+            // int cnt = count(mat[i].begin(), mat[i].end(), 1);
+
             for (int j = 0; j < mat[i].size(); j++) {
                 if (mat[i][j] == 1)
                     count++;

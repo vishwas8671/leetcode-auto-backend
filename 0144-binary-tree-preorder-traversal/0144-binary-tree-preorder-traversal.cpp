@@ -13,22 +13,35 @@
 
 
 //Iterative code
+// class Solution {
+// public:
+//     vector<int> preorderTraversal(TreeNode* root) {
+//         vector<int> ans;
+//         if (root == NULL) return ans;
+//         stack<TreeNode*> st;
+//         st.push(root);
+//         while (!st.empty()) {
+//             TreeNode* node = st.top();
+//             st.pop();
+//             ans.push_back(node->val);
+//             if (node->right)
+//                 st.push(node->right);
+//             if (node->left)
+//                 st.push(node->left);
+//         }
+//         return ans;
+//     }
+// };
+
+//Recursive code
 class Solution {
 public:
+    vector<int>v;
     vector<int> preorderTraversal(TreeNode* root) {
-        vector<int> ans;
-        if (root == NULL) return ans;
-        stack<TreeNode*> st;
-        st.push(root);
-        while (!st.empty()) {
-            TreeNode* node = st.top();
-            st.pop();
-            ans.push_back(node->val);
-            if (node->right)
-                st.push(node->right);
-            if (node->left)
-                st.push(node->left);
-        }
-        return ans;
+        if(root == NULL) return v;
+        v.push_back(root->val);
+        preorderTraversal(root->left);
+        preorderTraversal(root->right);
+        return v;
     }
 };

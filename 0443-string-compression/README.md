@@ -43,6 +43,7 @@ After modifying the input array in-place, the first character of <code>chars</co
 After modifying the input array in-place, the first 4 characters of <code>chars</code> should be <code>[&quot;a&quot;,&quot;b&quot;,&quot;1&quot;,&quot;2&quot;]</code>.
 </pre>
 
+
 <p>&nbsp;</p>
 <p><strong>Constraints:</strong></p>
 

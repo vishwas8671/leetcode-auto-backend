@@ -11,7 +11,6 @@ public:
                 tank = 0;
             }
         }
-        
         return total >= 0 ? start : -1;
     }
 };

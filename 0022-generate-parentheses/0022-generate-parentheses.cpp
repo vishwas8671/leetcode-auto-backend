@@ -14,7 +14,6 @@ public:
             backtrack(s + ')', open, close + 1, n);
         }
     }
-
     vector<string> generateParenthesis(int n) {
         backtrack("", 0, 0, n);
         return result;
